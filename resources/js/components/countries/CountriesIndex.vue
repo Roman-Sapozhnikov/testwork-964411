@@ -12,7 +12,7 @@
                     <tr>
                         <th>Name</th>
                         <th>Capital</th>
-                        <th>Size</th>
+                        <th>Area, (km<sup>2</sup>)</th>
                         <th>Population</th>
                         <th width="100">&nbsp;</th>
                     </tr>
@@ -21,7 +21,7 @@
                     <tr v-for="country, index in countries">
                         <td>{{ country.name }}</td>
                         <td>{{ country.capital }}</td>
-                        <td>{{ country.size }}</td>
+                        <td>{{ country.area }}</td>
                         <td>{{ country.population }}</td>
                         <td>
                             <router-link :to="{name: 'editCountry', params: {id: country.id}}" class="btn btn-xs btn-success w-100">

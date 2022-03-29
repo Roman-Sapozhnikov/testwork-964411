@@ -17,7 +17,7 @@ class CreateCountriesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('capital');
-            $table->float('size', 16, 0);
+            $table->float('area', 16, 0);
             $table->float('population', 16, 0);
             $table->timestamps();
         });

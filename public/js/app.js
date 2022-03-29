@@ -1959,7 +1959,7 @@ __webpack_require__.r(__webpack_exports__);
       country: {
         name: '',
         capital: '',
-        size: '',
+        area: '',
         population: ''
       }
     };
@@ -1974,7 +1974,6 @@ __webpack_require__.r(__webpack_exports__);
           path: '/'
         });
       })["catch"](function (resp) {
-        console.log(resp);
         alert("Could not create your country");
       });
     }
@@ -2052,9 +2051,9 @@ __webpack_require__.r(__webpack_exports__);
       countryId: null,
       country: {
         name: '',
-        address: '',
-        website: '',
-        email: ''
+        capital: '',
+        area: '',
+        population: ''
       }
     };
   },
@@ -37840,19 +37839,19 @@ var render = function () {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.country.size,
-                      expression: "country.size",
+                      value: _vm.country.area,
+                      expression: "country.area",
                     },
                   ],
                   staticClass: "form-control",
                   attrs: { type: "text" },
-                  domProps: { value: _vm.country.size },
+                  domProps: { value: _vm.country.area },
                   on: {
                     input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.country, "size", $event.target.value)
+                      _vm.$set(_vm.country, "area", $event.target.value)
                     },
                   },
                 }),
@@ -37902,7 +37901,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "control-label" }, [
-      _vm._v("Country size, (km"),
+      _vm._v("Country area, (km"),
       _c("sup", [_vm._v("2")]),
       _vm._v(")"),
     ])
@@ -38029,28 +38028,26 @@ var render = function () {
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "col-xs-12 form-group" }, [
-                _c("label", { staticClass: "control-label" }, [
-                  _vm._v("Country size"),
-                ]),
+                _vm._m(0),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.country.size,
-                      expression: "country.size",
+                      value: _vm.country.area,
+                      expression: "country.area",
                     },
                   ],
                   staticClass: "form-control",
                   attrs: { type: "text" },
-                  domProps: { value: _vm.country.size },
+                  domProps: { value: _vm.country.area },
                   on: {
                     input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.country, "size", $event.target.value)
+                      _vm.$set(_vm.country, "area", $event.target.value)
                     },
                   },
                 }),
@@ -38087,7 +38084,7 @@ var render = function () {
               ]),
             ]),
             _vm._v(" "),
-            _vm._m(0),
+            _vm._m(1),
           ]
         ),
       ]),
@@ -38095,6 +38092,16 @@ var render = function () {
   ])
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "control-label" }, [
+      _vm._v("Country area, (km"),
+      _c("sup", [_vm._v("2")]),
+      _vm._v(")"),
+    ])
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -38159,7 +38166,7 @@ var render = function () {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(country.capital))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(country.size))]),
+                _c("td", [_vm._v(_vm._s(country.area))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(country.population))]),
                 _vm._v(" "),
@@ -38224,7 +38231,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Capital")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Size")]),
+        _c("th", [_vm._v("Area, (km"), _c("sup", [_vm._v("2")]), _vm._v(")")]),
         _vm._v(" "),
         _c("th", [_vm._v("Population")]),
         _vm._v(" "),

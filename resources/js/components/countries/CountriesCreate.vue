@@ -22,8 +22,8 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <label class="control-label">Country size, (km<sup>2</sup>)</label>
-                            <input type="text" v-model="country.size" class="form-control">
+                            <label class="control-label">Country area, (km<sup>2</sup>)</label>
+                            <input type="text" v-model="country.area" class="form-control">
                         </div>
                     </div>
                     <div class="row">
@@ -50,7 +50,7 @@ export default {
             country: {
                 name: '',
                 capital: '',
-                size: '',
+                area: '',
                 population: '',
             }
         }
@@ -65,7 +65,6 @@ export default {
                     app.$router.push({path: '/'});
                 })
                 .catch(function (resp) {
-                    console.log(resp);
                     alert("Could not create your country");
                 });
         }

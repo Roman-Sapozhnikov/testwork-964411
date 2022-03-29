@@ -9,7 +9,7 @@ class Country extends Model
     protected $fillable = [
         'name',
         'capital',
-        'size',
+        'area',
         'population'
     ];
 }
